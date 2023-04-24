@@ -100,6 +100,7 @@ function playHover(drum) {
   source.buffer = drum.sound.buffer;
   source.connect(soundContext.destination);
   source.start(0);
+  console.log('played')
   drum.ready = false;
   playAnimate(drum);
   // throttle the note

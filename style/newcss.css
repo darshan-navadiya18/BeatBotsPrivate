@@ -233,56 +233,13 @@ a.article:hover {
     object-fit: fill;
 }
 
-/* #canvas-blended {
+#canvas-blended {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
     width: 100%;
-} */
-
-@media screen and (max-width: 576px) {
-    .motion-cam {
-        position: absolute;
-        bottom: 23vh;
-        left: 0;
-        width: 30%;
-        background-color: #000;
-    }
-
-    .motion-cam-title {
-        font-size: 12px;
-    }
-}
-
-@media screen and (min-width: 576px) {
-    .motion-cam {
-        position: absolute;
-        top: 0;
-        left: 35vw;
-        width: 30%;
-        background-color: #000;
-    }
-}
-
-@media screen and (min-width: 1140px) {
-    .app-panel .row-bottom {
-        bottom: -20vh;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .app-panel .row-bottom {
-        top: 0;
-        margin-left: 60%;
-        margin-top: -35px;
-    }
-
-    .app-panel .row-top {
-        top: 0;
-    }
-
-    .drum-background .row-bottom {
-        left: 60%;
-        position: relative;
-        top: -180px;
-    }
+    height: 100%;
+    opacity: 80%;
 }
 
 .spinner-grow {
