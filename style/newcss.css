@@ -64,12 +64,43 @@ a:focus {
     color: #fff;
     transition: all 0.3s;
 }
-#sidebar li{
+
+#sidebar-li{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-
+    border: 2px solid blue;
 }
+
+.volume-chooser {
+    background: #7386d5;
+    color: #fff;
+    position: relative;
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+
+.volume-control {
+    display: hidden;
+    border: 1px solid #7386d5;
+    background: #7386d5;
+    width: 40px;
+    padding: 10px;
+}
+
+.volume {
+    -webkit-appearance: slider-vertical;
+    width: 35px;
+}
+
+.sidebar-icon{
+    width: 30%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+
 #sidebar.active {
     margin-left: -250px;
 }
@@ -81,7 +112,7 @@ a:focus {
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    /* border-bottom: 1px solid #47748b; */
 }
 
 #sidebar ul p {
