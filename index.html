@@ -53,7 +53,7 @@
 
             <ul class="list-unstyled components">
                 <li class="active">
-                    <div class="sidebar-li"  style="display: flex; flex-direction: row; width: 100%;" id="record-btn">
+                    <div class="sidebar-li custom-side-menu-item"  style="display: flex; flex-direction: row; width: 100%;" id="record-btn">
                         <div class="sidebar-icon">
                             <img src="./icons/recorder.png" height="30px" width="30px">
                         </div>
@@ -62,7 +62,7 @@
                 </li>
                
                 <li id="li-share">
-                    <div class="sidebar-li"  style="display: flex; flex-direction: row; width: 100%;">
+                    <div class="sidebar-li custom-side-menu-item"  style="display: flex; flex-direction: row; width: 100%;">
                         <div class="sidebar-icon">
                             <img src="./icons/share.png" height="30px" width="30px" class="sidebar-item-icon">
                         </div>
@@ -70,7 +70,7 @@
                     </div>
                 </li>
                 <li id="volume-wrapper">
-                    <div style="display: flex; flex-direction: row; width: 100%;">
+                    <div class="custom-side-menu-item" style="display: flex; flex-direction: row; width: 100%;">
                         <div class="sidebar-icon">
                             <img src="./icons/speaker-filled-audio-tool.png" height="30px" width="30px" class="sidebar-item-icon">
                         </div>
@@ -102,10 +102,10 @@
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info custom-menu">
                         <i class="fas fa-align-left"></i>
                         <!-- TODO: Add a burger button here -->
-                        <span>Toggle Sidebar</span>
+                        <img src="./icons/menu.png" height="25px" width="25px"></img>
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -116,13 +116,13 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Tutorial</a>
+                                <a class="nav-link nav-new-btn" href="#">Tutorial</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Source code</a>
+                                <a class="nav-link nav-new-btn" href="#">Source code</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">About Us</a>
+                                <a class="nav-link nav-new-btn " href="aboutus.html">About Us</a>
                             </li>
                             <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">Page</a>

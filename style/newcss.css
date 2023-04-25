@@ -17,19 +17,29 @@ p {
     color: #999;
 }
 
-a,
-a:hover,
-a:focus {
-    color: inherit;
-    text-decoration: none;
-    transition: all 0.3s;
+/* .custom-side-menu-item, */
+.custom-side-menu-item:hover,
+.custom-side-menu-item:focus {
+    color: inherit !important;
+    text-decoration: none !important;
+    transition: all 0.3s !important;
+    background-color: #594EE9;
 }
+a{
+    color: white;
 
+}
+a:hover{
+    color: white !important;
+    text-decoration: none;
+    background-color: #594EE9 !important;
+}
 .navbar {
     padding: 15px 10px;
     background: #fff;
     border: none;
-    border-radius: 0;
+    background-color: #4D5163 !important;
+    border-radius: 8px;
     margin-bottom: 40px;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -39,6 +49,10 @@ a:focus {
     outline: none !important;
     border: none;
 }
+.btn-info {
+    background-color: transparent;
+    border-color: transparent;
+}
 
 .line {
     width: 100%;
@@ -46,7 +60,9 @@ a:focus {
     border-bottom: 1px dashed #ddd;
     margin: 40px 0;
 }
-
+.nav-new-btn{
+    color: white !important;
+}
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -60,7 +76,7 @@ a:focus {
 #sidebar {
     min-width: 250px;
     max-width: 250px;
-    background: #7386d5;
+    background: #222223;
     color: #fff;
     transition: all 0.3s;
 }
@@ -72,7 +88,7 @@ a:focus {
 }
 
 .volume-chooser {
-    background: #7386d5;
+    /* background: #7386d5; */
     color: #fff;
     position: relative;
     padding: 10px;
@@ -134,6 +150,11 @@ a:focus {
     background-color: white;
     border: 1px solid #7386d5;
 }
+.btn-info:hover {
+    color: rgb(255, 255, 255);
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
 
 .ss-links{
     margin-top: 30px;
@@ -152,8 +173,6 @@ a:focus {
 
 .volume-control {
     display: hidden;
-    border: 1px solid #7386d5;
-    background: #7386d5;
     display: flex;
     justify-content: center;
 }
@@ -180,7 +199,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #7386d5;
+    background: #222223;
 }
 
 #sidebar ul.components {
@@ -261,6 +280,7 @@ a.article:hover {
     min-height: 100vh;
     transition: all 0.3s;
     overflow: hidden;
+    background-color: #0A0A0A;
 }
 
 .app-panel {
