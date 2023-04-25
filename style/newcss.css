@@ -80,6 +80,76 @@ a:focus {
     display: block;
 }
 
+#myModal{
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    height: 200px;
+    width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #7386d5;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 1000;
+    box-shadow: 10px 10px;
+}
+
+#myModal h2{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    border-bottom: 2px solid #0a0a0a;
+}
+
+#modal-close{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+#modal-close:hover{
+    transform: scale(1.2);
+}
+
+.m-modal-body{
+    height: 100%;
+    width: 100%;
+}
+
+#currLink {
+    margin-left: 10px;
+    padding-left: 10px;
+    width: 80%;
+    border-radius: 10px;
+    font-style: italic;
+    font: small;
+    color: blue;
+    text-decoration: underline;
+    background-color: white;
+    border: 1px solid #7386d5;
+}
+
+.ss-links{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.ss-link-i{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
 .volume-control {
     display: hidden;
     border: 1px solid #7386d5;

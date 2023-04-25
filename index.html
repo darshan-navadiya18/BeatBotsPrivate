@@ -18,25 +18,34 @@
     <!-- ------------------------------------------------------------------ -->
     <div class="wrapper">
         <!-- Sidebar  -->
-        <div class="modal fade z-index-master" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Share</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+        <div id="myModal">
+            <h2>Share</h2>
+            <img id="modal-close" src="./icons/close.png" width="20px" height="20px">
+            <div class="m-modal-body">
+                <div style="display: flex; justify-content: space-evenly; margin-top: 5px;">
+                    <a id="currLink" href="https://google.com">https://localhost:8000</a>
+                    <img src="./icons/share-black" height="25px" width="25px">
                 </div>
-                <div class="modal-body" id="cur-link">
-                  
+                <div class="ss-links">
+                    <div class="ss-link-i">
+                        <img src="./icons/instagram.png" height="50px" width="50px">
+                        Instagram
+                    </div>
+                    <div class="ss-link-i">
+                        <img src="./icons/whatsapp.png" height="50px" width="50px">
+                        Whatsapp
+                    </div>
+                    <div class="ss-link-i">
+                        <img src="./icons/linkedin.png" height="50px" width="50px">
+                        LinkedIn
+                    </div>
+                    <div class="ss-link-i">
+                        <img src="./icons/pinterest.png" height="50px" width="50px">
+                        Pintrest
+                    </div>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Copy</button>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
         <nav id="sidebar">
             <div class="sidebar-header">
                 <h3>BeatBots</h3>
@@ -52,7 +61,7 @@
                     </div>            
                 </li>
                
-                <li>
+                <li id="li-share">
                     <div class="sidebar-li"  style="display: flex; flex-direction: row; width: 100%;">
                         <div class="sidebar-icon">
                             <img src="./icons/share.png" height="30px" width="30px" class="sidebar-item-icon">

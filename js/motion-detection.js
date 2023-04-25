@@ -279,3 +279,13 @@ $('#volume-wrapper').on('mouseenter', function () {
 $('#volume-wrapper').on('mouseleave', function () {
   $('.volume-control').hide()
 })
+
+$('#li-share').on('click', function () {
+  console.log('on')
+  document.getElementById('myModal').style.visibility = 'visible';
+})
+
+$('#modal-close').on('click', function () {
+  console.log('close');
+  document.getElementById('myModal').style.visibility = 'hidden';
+})
