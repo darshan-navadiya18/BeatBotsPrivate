@@ -268,7 +268,6 @@ $(document).ready(function () {
 });
 
 $('#volume-wrapper').on('mouseenter', function () {
-  console.log('over')
   $('.volume-control').show()
 })
 
