@@ -7,7 +7,7 @@ let contextSource = canvasSource.getContext('2d');
 let contextBlended = canvasBlended.getContext('2d');
 let drums = {};
 const audioPath =  "sound"
-let volume1 = 1;
+let volume1 = 0.5;
 var slider = document.querySelector(".slider");
 
 
