@@ -226,7 +226,7 @@ function setAllDrumReadyStatus(isReady){
 
 function cameraStarted(){
   $(canvasBlended).delay(600).fadeIn(); 
-  $(".motion-cam").delay(3000).fadeIn();
+  $(".motion-cam").delay(600).fadeIn();
   console.log("camera started");
   $("#wpfront-scroll-top-container").addClass("d-none");
 }
