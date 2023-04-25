@@ -122,35 +122,35 @@
 
             <div class="app-panel">
                 <video id="webcam" height="640" width="400" autoplay playsinline></video>
-                <canvas id="canvas-source" height="640" width="400" hidden="true"></canvas>
+                <canvas id="canvas-source" height="640" width="400"></canvas>
                 <div class="motion-cam">
-                    <canvas id="canvas-blended" height="640" width="400" hidde="true"></canvas>
+                    <canvas id="canvas-blended" height="640" width="400" hidden="true"></canvas>
                 </div>
 
                 <div class="drum-container">
                     <div class="row row-top">
                         <div class="col-6 col-sm-3">
-                            <img class="virtual-drum" src="images/cymbal.png" name="crash" vd-id='0'>
+                            <img class="virtual-drum" src="./images/cymbal.png" name="crash" vd-id='0'>
                         </div>
                         <div class="col-6 col-sm-3 offset-sm-6 d-none d-sm-inline">
-                            <img class="virtual-drum" src="images/hi-hat.png" name="hi-hat" vd-id='1'>
+                            <img class="virtual-drum" src="./images/hi-hat.png" name="hi-hat" vd-id='1'>
                         </div>
                     </div>
                     <div class="row row-bottom">
                         <div class="col-4 p-sm-3 p-0 d-none d-sm-inline">
-                            <img class="virtual-drum" src="images/Floor-Tom.png" name="floor-tom" vd-id='2'>
+                            <img class="virtual-drum" src="./images/Floor-Tom.png" name="floor-tom" vd-id='2'>
                             <div class="spinner-grow text-primary d-none" role="status" id="floor-tom-glowing">
                                 <span class="sr-only">Loading...</span>
                             </div>
                         </div>
                         <div class="col-5 p-sm-3 p-0">
-                            <img class="virtual-drum" src="images/Bass-Drum.png" name="kick" vd-id='3'>
+                            <img class="virtual-drum" src="./images/Bass-Drum.png" name="kick" vd-id='3'>
                             <div class="spinner-grow text-primary d-none" role="status" id="kick-glowing">
                                 <span class="sr-only">Loading...</span>
                             </div>
                         </div>
                         <div class="col-3 p-sm-3 p-0 d-none d-sm-inline">
-                            <img class="virtual-drum" src="images/Snare.png" name="snare" vd-id='4'>
+                            <img class="virtual-drum" src="./images/Snare.png" name="snare" vd-id='4'>
                             <div class="spinner-grow text-primary d-none" role="status" id="snare-glowing">
                                 <span class="sr-only">Loading...</span>
                             </div>
@@ -158,13 +158,13 @@
                     </div>
                 </div>
                 <div class="webcam-pause">
-                    <img id="#pause-icon" src="/images/play-icon.png" width="100" height="100" />
+                    <img id="#pause-icon" src="./images/play-icon.png" width="100" height="100" />
                 </div>
             </div>
         </div>
     </div>
 
-    <script src='js/motion-detection.js'></script>
+    <script src='./js/motion-detection.js'></script>
 </body>
 
 </html>
