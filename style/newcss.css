@@ -64,7 +64,12 @@ a:focus {
     color: #fff;
     transition: all 0.3s;
 }
+#sidebar li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 
+}
 #sidebar.active {
     margin-left: -250px;
 }
