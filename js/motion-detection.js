@@ -7,6 +7,17 @@ let contextSource = canvasSource.getContext('2d');
 let contextBlended = canvasBlended.getContext('2d');
 let drums = {};
 const audioPath =  "sound"
+let volume1 = 1;
+var slider = document.querySelector(".slider");
+
+
+slider.oninput = function() {
+  volume1 = this.value / 100;
+  var output = document.querySelector("#sliderValue");
+  output.innerHTML = this.value;
+  loadSounds();
+
+}
 
 contextSource.translate(canvasSource.width, 0);
 contextSource.scale(-1, 1);
@@ -42,8 +53,14 @@ $('.drum-container').click(function (){
 $('.virtual-drum').on('load', function () {
     var viewWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    console.log("viewWidth = "+ viewWidth);
+    console.log("viewHeight = "+ viewHeight);
     var ratioWidth = canvasBlended.width/viewWidth;
     var ratioHeight = canvasBlended.height/viewHeight;
+    console.log("canvas-width: "+canvasBlended.width);
+    console.log("canvas-height: "+canvasBlended.height);
+    console.log("viewWidth = "+ ratioWidth);
+    console.log("viewHeight = "+ ratioHeight);
     drums[this.attributes['vd-id'].value] = {
         id: this.attributes['vd-id'].value,
         name: this.attributes['name'].value,
@@ -84,10 +101,24 @@ function loadSounds() {
   bufferLoader.load();
 }
 
+function decreaseVolume(buffer, amount) {
+  var newBuffer = soundContext.createBuffer(buffer.numberOfChannels, buffer.length, buffer.sampleRate);
+  for (var i = 0; i < buffer.numberOfChannels; i++) {
+      var channelData = buffer.getChannelData(i);
+      var newChannelData = newBuffer.getChannelData(i);
+      for (var j = 0; j < buffer.length; j++) {
+          newChannelData[j] = channelData[j] * amount;
+      }
+  }
+  return newBuffer;
+}
 function finishedLoading(bufferList) {
   for (var i=0; i<5; i++) {
+    // var source = soundContext.createBufferSource();
+    var decreasedBuffer = decreaseVolume(bufferList[i], volume1);
     var source = soundContext.createBufferSource();
-    source.buffer = bufferList[i];
+    source.buffer = decreasedBuffer;
+    // source.buffer = bufferList[i];
     source.connect(soundContext.destination);
     drums[i].sound = source;
     drums[i].ready = true;
@@ -221,6 +252,7 @@ function setAllDrumReadyStatus(isReady){
 function cameraStarted(){
   $(canvasBlended).delay(600).fadeIn(); 
   $(".motion-cam").delay(600).fadeIn();
+  console.log("camera started");
   $("#wpfront-scroll-top-container").addClass("d-none");
 }
 

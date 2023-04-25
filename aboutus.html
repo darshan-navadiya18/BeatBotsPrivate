@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+}
+.home-button1 {
+  padding: 10px;
+  text-align: left;
+  background-color: #474e5d;
+  color: white;
+
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 550px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+<div class="home-button1">
+ <a href="index.html"><button>Home</button></a> 
+</div>
+<div class="about-section">
+  
+  <h1>Team - Voodoo Chile</h1>
+  <p>BeatBots is a gesture-based drumming system that uses a laptop camera to recognize hand movements and play drums notes according to those gestures.</p>
+  
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="Naheer.jpg" alt="Naheer" style="width:100%" height="0%">
+      <div class="container">
+        <h2>Naheer Fatima</h2>
+        <p class="title">ASU ID: 1225897779</p>
+        <p>Contributions</p>
+        <p>nnolas33@asu.edu</p>
+        <p> <a href="nnolas33@asu.edu"><button class="button">Contact</button></a></p>  
+      </div>
+    </div>
+  </div> 
+
+  <div class="column">
+    <div class="card">
+      <img src="/w3images/team2.jpg" alt="Darshan" style="width:100%">
+      <div class="container">
+        <h2>Darshan Navadiya</h2>
+        <p class="title">Asu Id: 1226123212</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>dnavadi1@asu.edu</p>
+        <p> <a href="dnavadi1@asu.edu"><button class="button">Contact</button></a></p>  
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="vidit.jpg" alt="Vidit" style="width:100%">
+      <div class="container">
+        <h2>Vidit Sanghvi</h2>
+        <p class="title">Asu Id: 1226074748</p>
+        <p>Contributions</p>
+        <p>vmsanghv@asu.edu</p>
+        <p> <a href="vmsanghv@asu.edu"><button class="button">Contact</button></a></p>   
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

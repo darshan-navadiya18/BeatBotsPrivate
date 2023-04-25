@@ -20,32 +20,30 @@
         <!-- Sidebar  -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+                <h3>BeatBots</h3>
             </div>
 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
+                <!-- <p>Dummy Heading</p> -->
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <a href="#">Record</a>
+                    <!-- <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="#">Record</a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="#">Volume</a>
                         </li>
                         <li>
-                            <a href="#">Home 3</a>
+                            <a href="#">Share</a>
                         </li>
-                    </ul>
+                    </ul> -->
                 </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
+               
+                <!-- <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
                             <a href="#">Page 1</a>
                         </li>
@@ -55,24 +53,35 @@
                         <li>
                             <a href="#">Page 3</a>
                         </li>
-                    </ul>
-                </li>
+                    </ul> -->
+                <!-- </li> --> 
                 <li>
-                    <a href="#">Portfolio</a>
+                    <a href="#">Share</a>
                 </li>
                 <li>
                     <a href="#">Contact</a>
                 </li>
+                <li>
+                    <div class="volume-chooser">
+                        <div class="volume-button">
+                          <span>Volume:</span>
+                          <span id="sliderValue">50</span></p>
+                        </div>
+                        <div class="volume-control">
+                          <input class="slider" type="range" value="50" max="100">
+                        </div>  
+                      </div> 
+                </li>
             </ul>
 
-            <ul class="list-unstyled CTAs">
+            <!-- <ul class="list-unstyled CTAs">
                 <li>
                     <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
                 </li>
                 <li>
                     <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
                 </li>
-            </ul>
+            </ul> -->
         </nav>
 
         <!-- Page Content  -->
@@ -83,6 +92,7 @@
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
+                        <!-- TODO: Add a burger button here -->
                         <span>Toggle Sidebar</span>
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
@@ -94,17 +104,17 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Page</a>
+                                <a class="nav-link" href="#">Tutorial</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
+                                <a class="nav-link" href="#">Source code</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
+                                <a class="nav-link" href="aboutus.html">About Us</a>
                             </li>
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="#">Page</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </div>
@@ -114,7 +124,7 @@
                 <video id="webcam" height="640" width="400" autoplay playsinline></video>
                 <canvas id="canvas-source" height="640" width="400" hidden="true"></canvas>
                 <div class="motion-cam">
-                    <canvas id="canvas-blended" height="640" width="400"></canvas>
+                    <canvas id="canvas-blended" height="640" width="400" hidde="true"></canvas>
                 </div>
 
                 <div class="drum-container">
@@ -158,3 +168,35 @@
 </body>
 
 </html>
+<style>
+    .volume-chooser {
+      background: #7386d5;
+      color: #fff;
+      /* padding: 5px; */
+      /* display: inline-block; */
+      position: relative;
+      padding: 10px;
+      font-size: 1.1em;
+      display: block;
+    }
+    
+    .volume-chooser:hover .volume-control {
+      display: block;
+    }
+    
+    .volume-control {
+      position: absolute;
+      display: none;
+      top: 40%;
+      border: 1px solid #7386d5;
+      background: #7386d5;
+      width: 40px;
+      padding: 10px;
+    
+    }
+    
+    .volume {
+      -webkit-appearance: slider-vertical;
+      width: 35px;
+    }
+  </style>
