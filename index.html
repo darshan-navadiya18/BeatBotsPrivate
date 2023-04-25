@@ -39,9 +39,7 @@
                         </li>
                     </ul> -->
                 </li>
-                <li>
-                    <a href="#">Volume</a>
-                </li>
+               
                 <!-- <li>
                     <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle">Pages</a>
@@ -62,6 +60,17 @@
                 </li>
                 <li>
                     <a href="#">Contact</a>
+                </li>
+                <li>
+                    <div class="volume-chooser">
+                        <div class="volume-button">
+                          <span>Volume:</span>
+                          <span id="sliderValue">50</span></p>
+                        </div>
+                        <div class="volume-control">
+                          <input class="slider" type="range" value="50" max="100">
+                        </div>  
+                      </div> 
                 </li>
             </ul>
 
@@ -159,3 +168,35 @@
 </body>
 
 </html>
+<style>
+    .volume-chooser {
+      background: #7386d5;
+      color: #fff;
+      /* padding: 5px; */
+      /* display: inline-block; */
+      position: relative;
+      padding: 10px;
+      font-size: 1.1em;
+      display: block;
+    }
+    
+    .volume-chooser:hover .volume-control {
+      display: block;
+    }
+    
+    .volume-control {
+      position: absolute;
+      display: none;
+      top: 40%;
+      border: 1px solid #7386d5;
+      background: #7386d5;
+      width: 40px;
+      padding: 10px;
+    
+    }
+    
+    .volume {
+      -webkit-appearance: slider-vertical;
+      width: 35px;
+    }
+  </style>

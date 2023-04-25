@@ -7,6 +7,17 @@ let contextSource = canvasSource.getContext('2d');
 let contextBlended = canvasBlended.getContext('2d');
 let drums = {};
 const audioPath =  "sound"
+let volume1 = 1;
+var slider = document.querySelector(".slider");
+
+
+slider.oninput = function() {
+  volume1 = this.value / 100;
+  var output = document.querySelector("#sliderValue");
+  output.innerHTML = this.value;
+  loadSounds();
+
+}
 
 contextSource.translate(canvasSource.width, 0);
 contextSource.scale(-1, 1);
@@ -90,10 +101,24 @@ function loadSounds() {
   bufferLoader.load();
 }
 
+function decreaseVolume(buffer, amount) {
+  var newBuffer = soundContext.createBuffer(buffer.numberOfChannels, buffer.length, buffer.sampleRate);
+  for (var i = 0; i < buffer.numberOfChannels; i++) {
+      var channelData = buffer.getChannelData(i);
+      var newChannelData = newBuffer.getChannelData(i);
+      for (var j = 0; j < buffer.length; j++) {
+          newChannelData[j] = channelData[j] * amount;
+      }
+  }
+  return newBuffer;
+}
 function finishedLoading(bufferList) {
   for (var i=0; i<5; i++) {
+    // var source = soundContext.createBufferSource();
+    var decreasedBuffer = decreaseVolume(bufferList[i], volume1);
     var source = soundContext.createBufferSource();
-    source.buffer = bufferList[i];
+    source.buffer = decreasedBuffer;
+    // source.buffer = bufferList[i];
     source.connect(soundContext.destination);
     drums[i].sound = source;
     drums[i].ready = true;
