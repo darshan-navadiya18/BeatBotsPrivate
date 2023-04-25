@@ -196,6 +196,9 @@ a:hover{
 #sidebar.active {
     margin-left: -250px;
 }
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+}
 
 #sidebar .sidebar-header {
     padding: 20px;
