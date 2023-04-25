@@ -267,12 +267,12 @@ $(document).ready(function () {
   });
 });
 
-$('.volume-chooser').on('mouseenter', function () {
+$('#volume-wrapper').on('mouseenter', function () {
   console.log('over')
   $('.volume-control').show()
 })
 
 
-$('.volume-chooser').on('mouseleave', function () {
+$('#volume-wrapper').on('mouseleave', function () {
   $('.volume-control').hide()
 })
