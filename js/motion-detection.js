@@ -21,6 +21,7 @@ slider.oninput = function() {
 
 contextSource.translate(canvasSource.width, 0);
 contextSource.scale(-1, 1);
+$('.volume-control').hide()
 
 $('.webcam-pause').click(function (){
   if( $('webcam-pause').hasClass('d-none')){
@@ -265,3 +266,12 @@ $(document).ready(function () {
       $('#sidebar').toggleClass('active');
   });
 });
+
+$('#volume-wrapper').on('mouseenter', function () {
+  $('.volume-control').show()
+})
+
+
+$('#volume-wrapper').on('mouseleave', function () {
+  $('.volume-control').hide()
+})

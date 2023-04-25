@@ -13,7 +13,6 @@
     <script src="js/buffer-loader.js"></script>
     <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
 </head>
-
 <body>
     <!-- ------------------------------------------------------------------ -->
     <div class="wrapper">
@@ -24,53 +23,37 @@
             </div>
 
             <ul class="list-unstyled components">
-                <!-- <p>Dummy Heading</p> -->
                 <li class="active">
-                    <a href="#">Record</a>
-                    <!-- <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Record</a>
-                        </li>
-                        <li>
-                            <a href="#">Volume</a>
-                        </li>
-                        <li>
-                            <a href="#">Share</a>
-                        </li>
-                    </ul> -->
+                    <div class="sidebar-li"  style="display: flex; flex-direction: row; width: 100%;">
+                        <div class="sidebar-icon">
+                            <img src="./icons/recorder.png" height="30px" width="30px">
+                        </div>
+                        <a href="#">Record</a>
+                    </div>            
                 </li>
                
-                <!-- <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle">Pages</a>
-                     <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul> -->
-                <!-- </li> --> 
                 <li>
-                    <a href="#">Share</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-                <li>
-                    <div class="volume-chooser">
-                        <div class="volume-button">
-                          <span>Volume:</span>
-                          <span id="sliderValue">50</span></p>
+                    <div class="sidebar-li"  style="display: flex; flex-direction: row; width: 100%;">
+                        <div class="sidebar-icon">
+                            <img src="./icons/share.png" height="30px" width="30px" class="sidebar-item-icon">
                         </div>
-                        <div class="volume-control">
-                          <input class="slider" type="range" value="50" max="100">
-                        </div>  
-                      </div> 
+                        <a href="#">Share</a>
+                    </div>
+                </li>
+                <li id="volume-wrapper">
+                    <div style="display: flex; flex-direction: row; width: 100%;">
+                        <div class="sidebar-icon">
+                            <img src="./icons/speaker-filled-audio-tool.png" height="30px" width="30px" class="sidebar-item-icon">
+                        </div>
+                        <div class="volume-chooser">
+                            <span>Volume:</span>
+                            <span id="sliderValue">50</span>
+                        </div>
+                    </div>
+                    
+                    <div class="volume-control">
+                        <input class="slider" type="range" value="50" max="100">
+                    </div>
                 </li>
             </ul>
 
@@ -168,35 +151,3 @@
 </body>
 
 </html>
-<style>
-    .volume-chooser {
-      background: #7386d5;
-      color: #fff;
-      /* padding: 5px; */
-      /* display: inline-block; */
-      position: relative;
-      padding: 10px;
-      font-size: 1.1em;
-      display: block;
-    }
-    
-    .volume-chooser:hover .volume-control {
-      display: block;
-    }
-    
-    .volume-control {
-      position: absolute;
-      display: none;
-      top: 40%;
-      border: 1px solid #7386d5;
-      background: #7386d5;
-      width: 40px;
-      padding: 10px;
-    
-    }
-    
-    .volume {
-      -webkit-appearance: slider-vertical;
-      width: 35px;
-    }
-  </style>
