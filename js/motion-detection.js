@@ -42,8 +42,14 @@ $('.drum-container').click(function (){
 $('.virtual-drum').on('load', function () {
     var viewWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    console.log("viewWidth = "+ viewWidth);
+    console.log("viewHeight = "+ viewHeight);
     var ratioWidth = canvasBlended.width/viewWidth;
     var ratioHeight = canvasBlended.height/viewHeight;
+    console.log("canvas-width: "+canvasBlended.width);
+    console.log("canvas-height: "+canvasBlended.height);
+    console.log("viewWidth = "+ ratioWidth);
+    console.log("viewHeight = "+ ratioHeight);
     drums[this.attributes['vd-id'].value] = {
         id: this.attributes['vd-id'].value,
         name: this.attributes['name'].value,
@@ -220,7 +226,8 @@ function setAllDrumReadyStatus(isReady){
 
 function cameraStarted(){
   $(canvasBlended).delay(600).fadeIn(); 
-  $(".motion-cam").delay(600).fadeIn();
+  $(".motion-cam").delay(3000).fadeIn();
+  console.log("camera started");
   $("#wpfront-scroll-top-container").addClass("d-none");
 }
 
